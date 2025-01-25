@@ -1,0 +1,861 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:  sans-serif;
+}
+
+ body{
+    padding: 0px;
+    margin: 0px;
+ }
+#top{
+    background-color: aliceblue;
+    height: 30px;
+}
+.top-main{
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 0px;
+    justify-content: center;
+}
+.top-second-three{
+    display: flex;
+    justify-content: space-evenly;
+}
+#search{
+    border: none;
+}
+#top-second{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.navs{
+    display: flex;
+    width: 100%;
+    /* max-width: 1200px; */
+    justify-content: space-between;
+    padding: 10px 80px;
+    box-sizing: border-box;
+}
+.nav-item{
+    display: flex;
+    text-align: center;
+}
+@media (max-width: 768px){
+    .navs{
+        display: none;
+    }
+    .top-second-three p{
+        display: none;
+    }
+}
+@media  screen and (max-width: 600px) {
+    body{
+        padding: 5px;
+       
+     }
+
+    #top{
+        background-color: aliceblue;
+        height: 40px;
+       
+    }
+    .top-main{
+        text-align: center;
+        font-size: 13px;
+        padding: 5px 0px;
+        
+    }
+    #top-second{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      
+       
+     
+    }
+    .top-second-two{
+        font-size:larger;
+        color:teal;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-bottom: 15px;
+    }
+   
+   
+    .slider-container {
+        width: 100%;
+       
+       
+        
+       
+        overflow: hidden; /* Ensure no content leaks outside */
+      }
+      
+      .slider {
+        display: flex; /* Align items horizontally */
+   /* Occupy the full container width */
+      
+    
+        object-fit: contain;
+        
+      }
+      
+      .slide {
+        min-width: 100%; /* Each slide takes 100% width of the container */
+        /* Match container height */
+      }
+      
+      .slide img {
+        width: 100%; /* Makes the image occupy the full width of its container */
+       /* Maintains the aspect ratio */
+        object-fit: contain; /* Ensures the entire image is visible */
+        
+      }
+
+      .side-one{
+     
+        /* height: 540px; */
+     
+        font-size: 5px;
+       
+     
+    }
+    .side-one p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px; /* Customize the font size */
+        font-weight: 100; /* You can also change the font weight */
+        color: #831111; /* Adjust text color if needed */
+    }
+    #extra-write{
+        display: flex;
+       
+    }
+   
+      
+    
+    
+  }
+
+/* img */
+.slider-container{
+    width: 100%;
+   
+    overflow: hidden;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    /* width: 100%; */
+    animation: slide 15s infinite;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (min-width: 768px){
+    .slide{
+        height: auto;
+    }
+    .slider-container{
+        height: auto;
+    }
+    @keyframes slide{
+        0% {
+          transform: translateX(0);
+        }
+        33.33% {
+          transform: translateX(-100%);
+        }
+        66.66% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+    }
+}
+
+/* Animation for sliding the images */
+
+
+/* extra write */
+.side-one{
+    width: 40%;
+    /* height: 540px; */
+    font-size: 50px;
+    padding: 5px 40px;
+ 
+}
+.side-one p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px; /* Customize the font size */
+    font-weight: 300; /* You can also change the font weight */
+    color: #333; /* Adjust text color if needed */
+}
+#extra-write{
+    display: flex;
+    padding: 20px 60px;
+}
+.side-two{
+   
+    width: 60%;
+    height: auto;
+    padding: 0px 100px;
+    font-size: 20px;
+}
+.side-two p {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px; /* Customize the font size */
+    font-weight: 300; /* You can also change the font weight */
+    color: #333; /* Adjust text color if needed */
+}
+.side-two{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    gap: 30px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+.feature{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    /* padding: 30px 0px; */
+    /* margin-right: 20px; */
+}
+.feature i{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.know-more{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 90px;
+}
+.know-more i{
+    margin-left: 10px;
+}
+@media (max-width: 768px){
+    #extra-write {
+        flex-direction: column;
+       
+    }
+    /* .side-one, .side-two{
+        width: 100%;
+    } */
+}
+
+/* multiple watches */
+
+#multiple-watch{
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+.header a{
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+.header a:hover{
+    text-decoration: underline;
+}
+.watch{
+    display: flex;
+    overflow-x: auto;
+}
+.watch-item{
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    margin-right: 10px;
+    border: 1px solid #e0e0e0;
+}
+.watch-item img{
+    width: 100%;
+    height: auto;
+}
+.watch-item h2{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0 5px;
+}
+.watch-item p{
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+.watch-item .price{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.watch-controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+.watch-controls span{
+    font-size: 14px;
+    margin: 0 10px;
+}
+.watch-controls i {
+    font-size: 16px;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .watch-item {
+        flex: 0 0 50%;
+    }
+}
+@media (max-width: 480px){
+    .watch-item {
+        flex: 0 0 100%;
+    }
+}
+
+/* video part */
+.video-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    /* padding: 0 20px; */
+}
+.vd{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    /* max-width: 1200px; */
+    padding: 20px;  
+}
+.text-sections{
+    flex: 1;
+    padding-right: 20px;
+}
+.text-sections h1{
+    font-size: 2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+    font-weight: lighter;
+   
+    
+}
+.text-sections a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+    margin-top: 120px;
+}
+.text-sections a i{
+    margin-right: 10px;
+}
+.video-sections{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-sections iframe{
+    width: 100%;
+    /* height: auto; */
+    border: none;
+    border-radius: 8px;
+}
+@media (max-width: 768px){
+    .vd {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .text-sections{
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* featured watch */
+.featured-watch{
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+/* baki sabhi code upar wale multiple code ke sathe connect he */
+
+/* don't touch this code */
+.good{
+    width: 100%;
+    height: 650px;
+    background-color: #f4f4f4;
+}
+
+/* design of watch */
+
+object{
+    margin: 0px;
+    /* padding: 0px 00px 0px 0px !important; */
+}
+#svg{
+    display: flex;
+    flex-wrap: nowrap;
+    background-image: url(img/sellWatch.svg);
+    background-repeat: no-repeat;
+    /* align-items: self-start; */
+    background-size: contain;
+    background-size: 500px;
+    height: 1000px;
+}
+.svg-write{
+    display: flex;
+    padding: 80px 100px 0px 600px;  /*set word in same web */
+    width: 100%;
+    height: 800px;
+    flex: 1;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.svg-write h1{
+    font-size: 40px;
+}
+.svg-write p{
+    padding: 20px 0px;
+    font-size: 16px;
+}
+.svg-file{
+    width: 40%;
+}
+.steps{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    gap: 70px;
+    /* margin-bottom: 20px;*/
+    margin-top: 60px;
+}
+.step{
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+    width: 40%;
+}
+.work{
+    display: flex;
+    padding-top: 30px;
+}
+.line{
+    flex-grow: 1;
+    height: 1px;
+    margin: 10px 30px;
+    border-top: 1px solid black;
+    position: relative;
+}
+.line::before{
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+}
+.badge{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+@media (max-width:1024px){
+    #svg{
+        background-image: none;
+    }
+    .svg-write{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 60px;
+        /* height: 900px; */
+        /* padding: 10px 10px 10px 10px; */
+    }
+}
+@media (max-width: 768px){
+    .steps{
+        gap: 20px;
+        height: auto;
+        margin-top: 20px;
+    }
+    .svg-write{
+        padding: 150px 30px;
+    }
+}
+
+/* text with image */
+#img-text{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.textstyle{
+    flex: 1;
+    padding: 200px 70px;
+}
+.textstyle h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.textstyle p{
+    font-size: 1em;
+    line-height: 1.6;
+}
+.imgstyle{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 120px 0px 0px 0px;
+}
+.imgstyle img {
+    width: 100%;
+    height: auto;
+}
+.imgstyle .large-img {
+    flex: 1 1 50%;
+}
+.imgstyle .small-img {
+    flex: 1 1 49%;
+}
+@media (max-width: 768px) {
+    .textstyle, .imgstyle {
+        flex: 1 1 100%;
+    }
+    .imgstyle .small-img {
+        flex: 1 1 100%;
+    }
+}
+
+/* logo as design by owner */
+#logo{
+    display: flex;
+    padding: 100px 100px;
+    background-color: #f4f4f4;
+}
+.logo-text{
+    width: 70%;
+}
+.logo-text p{
+    padding-bottom: 25px;
+}
+.logo-text h1{
+    padding-top: 25px;
+    font-size: 2.5em;
+}
+
+
+/* .logo-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+} */
+
+.circle-logo {
+    position: relative;
+    width: 30%; /* Total width of the container */
+    height: 100px; /* Total height of the overlapping section */
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+
+}
+
+.black-circle {
+    background-color: black;
+    top: 0;
+    left: 0;
+}
+
+.white-circle {
+    background-color: white;
+    border: 1px solid black; /* Optional border for visibility */
+    top: 0;
+    left: 70px; /* Adjust to control overlap */
+}
+.quote {
+    font-size: 60px;
+    font-weight: bold;
+    transform: rotate(0deg);
+    color: white;
+    margin: 80px 30px 50px 20px !important;
+}
+
+.deloitte {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.dot {
+    color: #82C341;
+}
+
+@media (max-width: 768px) {
+    #logo{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    #logo{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* logo slider automated */
+.skip-slider{
+    padding: 100px 0px 100px 100px;
+}
+
+/* instagram-handle */
+#insta{
+    width: 90%;
+    /* max-width: 100%; */
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.follow{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.instagram-handle{
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.instagram-handle a{
+    color: #555;
+    text-decoration: none;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+}
+.grid img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.new-arrivals{
+    position: absolute;
+    background: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    top: 10px;
+    left: 10px;
+}
+.grid-item{
+    position: relative;
+}
+
+
+/* warnatty */
+
+.warrantys{
+    display: flex;
+    width: 100%;
+    /* max-width: 1200px; */
+    justify-content: space-between;
+    padding: 30px 70px;
+    box-sizing: border-box;
+}
+.warranty-item{
+    display: flex;
+    text-align: center;
+}
+.warranty-item i{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.warranty-item p{
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+@media (max-width: 768px){
+    .warrantys{
+        flex-direction: column;
+        align-items: center;
+    }
+    .warranty-item{
+        margin-bottom: 20px;
+    }
+}
+
+/* footer */
+.footer{
+    background-color: #000;
+    padding: 40px 10px;
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-column{
+    flex: 1;
+    min-width: 200px;
+    /* gap: 10px; */
+    margin: 10px;
+    padding: 0px 50px;
+}
+.footer-column h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.footer-column p, .footer-column a{
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    display: flex;
+}
+.footer-column input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+.footer-column button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.footer-column button i{
+    margin-left: 5px;
+}
+.footer-bottom{
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #444;
+    background-color: #000;
+    color: white;
+}
+.footer-bottom p{
+    margin: 0;
+    font-size: 14px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.social-icons a{
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+}
+.whatsapp-icon{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+}
+
+.shaking-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    animation: shake 0.8s infinite;
+    transition: background-color 0.3s ease;
+  }
+
+  .shaking-button:hover {
+    background-color: #9200b3;
+  }
+
+  .shaking-button i {
+    margin-right: 8px;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+  }
